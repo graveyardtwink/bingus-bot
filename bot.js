@@ -8,6 +8,7 @@ dotenv.config();
 const app = function (req, res) {
     res.writeHead(200);
     res.end("Dummy :^)");
+	console.log("<==KEEPALIVE==>")
 };
 http.createServer(app).listen(80);
 
