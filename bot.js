@@ -2,8 +2,14 @@ const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require('node:fs');
 const path = require('node:path');
+var http = require('http');
 
 dotenv.config();
+const app = function (req, res) {
+    res.writeHead(200);
+    res.end("Dummy :^)");
+};
+http.createServer(app).listen(80);
 
 const client = new Client({ intents: [
   GatewayIntentBits.Guilds,
